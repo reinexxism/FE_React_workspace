@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import TravelList from "../components/TravelList";
 
 export default function AppTravelList() {
