@@ -51,6 +51,11 @@ export default function AppTravelList() {
 
   // handleDeleteBtn function when user clicked Delete button
   const handleDeleteBtn = (e) => {
+    if (window.confirm("정말 이 여행지를 삭제하실건가요?")) {
+      setTravelLists((prev) => {
+        return [...prev.slice(0, e), ...prev.slice(e + 1)];
+      });
+    }
     console.log("삭제를 원하는 객체 데이터 정보 : ", travelLists[e]);
   };
 
