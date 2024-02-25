@@ -62,7 +62,7 @@ export default function AppTravelList() {
   return (
     <>
       <button onClick={handleAddBtn}>ADD</button>
-      <p>Welcome, {nickname}</p>
+      <p className="flex justify-center text-pink-200">Welcome, {nickname}</p>
       {travelLists.map((travelList, index) => {
         return (
           <TravelList
