@@ -85,7 +85,6 @@ export default function AppTravelList() {
         </p>
       </div>
       <div className=" w-[88%] h-[400px] mt-[20px] overflow-scroll">
-        {/* 여행지 리스트 보여주는 부분 */}
         {travelLists.map((travelList, index) => {
           return (
             <TravelList
@@ -100,7 +99,6 @@ export default function AppTravelList() {
           );
         })}
       </div>
-      {/* 여행지 추가하기 버튼 구역 */}
       <div className=" w-[100%] bg-light-black h-[12%] absolute bottom-0 rounded-b-[25px] flex flex-row-reverse items-center">
         <button
           onClick={handleAddBtn}
