@@ -19,11 +19,6 @@ export default function TravelList({ data, Index, functions }) {
           <p className="text-[11px] text-text-white">{task}</p>
         </div>
       </div>
-      {/* <ul className="w-[100%]">
-        <li>여행 희망 도시 : {city}</li>
-        <li>여행 희망 날짜 : {date}</li>
-        <li>여행 희망 활동 : {task}</li>
-      </ul> */}
       <div className="w-[130px] h-[100%] flex justify-evenly items-center">
         <button
           className="w-[45px] h-[45px] bg-light-green rounded-[10px]"
