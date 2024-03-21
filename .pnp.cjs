@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.4.35"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:64aab8dc91543398701a8ba2a693d7ffaf569647fd2e99f734da7cd0cfe98a34d1e1aec00f9bbce02c8791ce04fddb1d3973bb2550759e1850269fb62b1b57bb#npm:18.2.0"],\
+            ["tailwind-scrollbar-hide", "npm:1.1.7"],\
             ["tailwindcss", "npm:3.4.1"],\
             ["vite", "virtual:64aab8dc91543398701a8ba2a693d7ffaf569647fd2e99f734da7cd0cfe98a34d1e1aec00f9bbce02c8791ce04fddb1d3973bb2550759e1850269fb62b1b57bb#npm:5.1.3"]\
           ],\
@@ -4073,6 +4074,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.4.35"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:64aab8dc91543398701a8ba2a693d7ffaf569647fd2e99f734da7cd0cfe98a34d1e1aec00f9bbce02c8791ce04fddb1d3973bb2550759e1850269fb62b1b57bb#npm:18.2.0"],\
+            ["tailwind-scrollbar-hide", "npm:1.1.7"],\
             ["tailwindcss", "npm:3.4.1"],\
             ["vite", "virtual:64aab8dc91543398701a8ba2a693d7ffaf569647fd2e99f734da7cd0cfe98a34d1e1aec00f9bbce02c8791ce04fddb1d3973bb2550759e1850269fb62b1b57bb#npm:5.1.3"]\
           ],\
@@ -4552,6 +4554,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/supports-preserve-symlinks-flag-npm-1.0.0-f17c4d0028-53b1e247e6.zip/node_modules/supports-preserve-symlinks-flag/",\
           "packageDependencies": [\
             ["supports-preserve-symlinks-flag", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tailwind-scrollbar-hide", [\
+        ["npm:1.1.7", {\
+          "packageLocation": "./.yarn/cache/tailwind-scrollbar-hide-npm-1.1.7-537baa5b75-2434a1db7a.zip/node_modules/tailwind-scrollbar-hide/",\
+          "packageDependencies": [\
+            ["tailwind-scrollbar-hide", "npm:1.1.7"]\
           ],\
           "linkType": "HARD"\
         }]\

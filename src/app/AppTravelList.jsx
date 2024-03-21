@@ -84,7 +84,7 @@ export default function AppTravelList() {
           ..anywhere is fine!
         </p>
       </div>
-      <div className=" w-[88%] h-[400px] mt-[20px] overflow-scroll">
+      <div className=" w-[88%] h-[400px] mt-[20px] overflow-scroll scrollbar-hide">
         {travelLists.map((travelList, index) => {
           return (
             <TravelList
