@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import TravelList from "../components/TravelList";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AppTravelList() {
   const [nickname, setNickname] = useState("");
   const [travelLists, setTravelLists] = useState([]);
 
-  // user nickname -> when window is first loaded
   window.onload = () => {
     const userNickname = prompt("환영합니다! 사용자님의 닉네임을 알려주세요.");
     setNickname(userNickname);
   };
 
-  // handleAddBtn function when user clicked ADD button
   const handleAddBtn = () => {
     const travelCity = prompt(`${nickname}님이 가고 싶은 여행지는 어디인가요?`);
     const travelDate = prompt(
@@ -31,7 +28,6 @@ export default function AppTravelList() {
     ]);
   };
 
-  // handleEditBtn function when user clicked Edit button
   const handleEditBtn = (e) => {
     const city = prompt(
       `${travelLists[e].city}를(을) 어떤 여행지로 바꾸고 싶으신가요?`
@@ -50,7 +46,6 @@ export default function AppTravelList() {
     console.log("수정을 원하는 객체 데이터 정보 : ", travelLists[e]);
   };
 
-  // handleDeleteBtn function when user clicked Delete button
   const handleDeleteBtn = (e) => {
     if (window.confirm("정말 이 여행지를 삭제하실건가요?")) {
       setTravelLists((prev) => {
@@ -61,33 +56,30 @@ export default function AppTravelList() {
   };
 
   return (
-    // entire container
     <div class=" bg-main-black w-[450px] h-[85%] rounded-[25px] flex flex-col items-center relative">
-      {/* 상단 바 신호등 표시 */}
       <div className="w-[100%] h-[5%] bg-light-black rounded-t-[25px] flex items-center">
         <div className=" w-3 h-3 rounded-full bg-pale-red ml-4"></div>
         <div className="w-3 h-3 rounded-full bg-pale-yellow ml-2"></div>
         <div className="w-3 h-3 rounded-full bg-pale-green ml-2"></div>
       </div>
-      {/* 중단 인포메이션 부분 */}
       <div className="w-[88%] h-[22%] mt-[5%] bg-extreme-light-black rounded-[25px] pt-3 pr-6 pl-6 ">
         <h2 className=" text-xl font-semibold text-text-white">
           Welcome, <span className=" text-main-green">{nickname}</span>
         </h2>
         <p className="text-sm text-text-white mb-[40px]">
-          Let's make your own{" "}
-          <span className="text-main-green font-semibold">TRAVEL</span>{" "}
+          Let's make your own
+          <span className="text-main-green font-semibold">TRAVEL</span>
           wishlist!
         </p>
         <p className="text-[11px] text-text-white">
           Where do you want to go today?
         </p>
         <p className="text-[11px] text-text-white">
-          <span className="text-main-green">New York</span>,{" "}
-          <span className="text-main-green">Paris</span>,{" "}
+          <span className="text-main-green">New York</span>,
+          <span className="text-main-green">Paris</span>,
           <span className="text-main-green">Milano</span>,
-          <span className="text-main-green">Tokyo</span>,{" "}
-          <span className="text-main-green">London</span>,{" "}
+          <span className="text-main-green">Tokyo</span>,
+          <span className="text-main-green">London</span>,
           <span className="text-main-green">Seoul</span>
           ..anywhere is fine!
         </p>
