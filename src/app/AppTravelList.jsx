@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TravelList from "../components/TravelList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function AppTravelList() {
   const [nickname, setNickname] = useState("");
@@ -104,8 +106,8 @@ export default function AppTravelList() {
           onClick={handleAddBtn}
           className=" w-[60px] h-[60px] rounded-full bg-extreme-dark-black mr-[20px]"
         >
-          <p className="text-[50px] text-text-white translate-y-[-11px] font-extralight">
-            +
+          <p className="text-[30px] text-text-white translate-y-[-11px] font-extralight mt-[20px]">
+            <FontAwesomeIcon icon={faPlus} />
           </p>
         </button>
       </div>
