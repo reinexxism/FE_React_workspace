@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TravelList from "../components/TravelList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AppTravelList() {
   const [nickname, setNickname] = useState("");
@@ -60,22 +61,64 @@ export default function AppTravelList() {
   };
 
   return (
-    <>
-      <button onClick={handleAddBtn}>ADD</button>
-      <p className="flex justify-center text-pink-200">Welcome, {nickname}</p>
-      {travelLists.map((travelList, index) => {
-        return (
-          <TravelList
-            data={travelList}
-            key={index}
-            Index={index}
-            functions={{
-              handleEdit: handleEditBtn,
-              handleDelete: handleDeleteBtn,
-            }}
-          />
-        );
-      })}
-    </>
+    // entire container
+    <div class=" bg-main-black w-[450px] h-[85%] rounded-[25px] flex flex-col items-center relative">
+      {/* 상단 바 신호등 표시 */}
+      <div className="w-[100%] h-[5%] bg-light-black rounded-t-[25px] flex items-center">
+        <div className=" w-3 h-3 rounded-full bg-pale-red ml-4"></div>
+        <div className="w-3 h-3 rounded-full bg-pale-yellow ml-2"></div>
+        <div className="w-3 h-3 rounded-full bg-pale-green ml-2"></div>
+      </div>
+      {/* 중단 인포메이션 부분 */}
+      <div className="w-[88%] h-[22%] mt-[5%] bg-extreme-light-black rounded-[25px] pt-3 pr-6 pl-6 ">
+        <h2 className=" text-xl font-semibold text-text-white">
+          Welcome, <span className=" text-main-green">{nickname}</span>
+        </h2>
+        <p className="text-sm text-text-white mb-[40px]">
+          Let's make your own{" "}
+          <span className="text-main-green font-semibold">TRAVEL</span>{" "}
+          wishlist!
+        </p>
+        <p className="text-[11px] text-text-white">
+          Where do you want to go today?
+        </p>
+        <p className="text-[11px] text-text-white">
+          <span className="text-main-green">New York</span>,{" "}
+          <span className="text-main-green">Paris</span>,{" "}
+          <span className="text-main-green">Milano</span>,
+          <span className="text-main-green">Tokyo</span>,{" "}
+          <span className="text-main-green">London</span>,{" "}
+          <span className="text-main-green">Seoul</span>
+          ..anywhere is fine!
+        </p>
+      </div>
+      <div className=" w-[88%] h-[400px] mt-[20px] overflow-scroll">
+        {/* 여행지 리스트 보여주는 부분 */}
+        {travelLists.map((travelList, index) => {
+          return (
+            <TravelList
+              data={travelList}
+              key={index}
+              Index={index}
+              functions={{
+                handleEdit: handleEditBtn,
+                handleDelete: handleDeleteBtn,
+              }}
+            />
+          );
+        })}
+      </div>
+      {/* 여행지 추가하기 버튼 구역 */}
+      <div className=" w-[100%] bg-light-black h-[12%] absolute bottom-0 rounded-b-[25px] flex flex-row-reverse items-center">
+        <button
+          onClick={handleAddBtn}
+          className=" w-[60px] h-[60px] rounded-full bg-extreme-dark-black mr-[20px]"
+        >
+          <p className="text-[50px] text-text-white translate-y-[-11px] font-extralight">
+            +
+          </p>
+        </button>
+      </div>
+    </div>
   );
 }
